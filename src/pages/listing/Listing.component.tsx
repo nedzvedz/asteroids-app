@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { List, ListItem } from 'material-ui/List';
 import { Asteroid } from '../../interfaces/asteroid';
 import { RouteComponentProps } from 'react-router-dom';
+import AsteroidComponent from '../../components/asteroid';
 
 interface Props extends RouteComponentProps<void> {
   asteroids: Array<Asteroid>;
@@ -16,11 +18,16 @@ export default class Listing extends React.Component<Props, void> {
   render() {
     return (
       <div>
-        <ul>
+        <h2>Found asteroids:</h2>
+        <List>
           { this.props.asteroids.map((asteroid: Asteroid, idx: number) => {
-            return <li key={idx}><pre>{JSON.stringify(asteroid)}</pre></li>;
+            return (
+              <ListItem key={idx}>
+                <AsteroidComponent asteroid={asteroid} />
+              </ListItem>
+            );
           })}
-        </ul>
+        </List>
       </div>
     );
   }

@@ -12,7 +12,7 @@ interface AsteroidsFeedResponse {
 }
 
 export function getAsteroids() {
-  return fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY`)
+  return fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=${API_KEY}`)
     .then((res: Response): Promise<AsteroidsFeedResponse> => res.json())
     .then((data): Promise<Array<Asteroid>> => {
       // TODO: Check for other options to fix missing 'values' method at Object constructor

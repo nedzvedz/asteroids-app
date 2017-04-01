@@ -1,0 +1,25 @@
+.asteroid {
+  display: flex;
+  flex-direction: row;
+
+  &__column {
+    width: 25%;
+    text-align: left;
+
+    &:last-child {
+      text-align: right;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__link {
+    color: #fff;
+  }
+}

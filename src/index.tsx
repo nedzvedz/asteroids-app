@@ -8,6 +8,11 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import appReducer from './reducers';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import * as injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 declare global {
     interface Window {
         __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any
@@ -21,7 +26,9 @@ const store = createStore(appReducer, composeEnhancers(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
   </Provider>,
   document.getElementById('root') as HTMLElement
 );
