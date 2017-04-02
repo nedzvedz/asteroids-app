@@ -3,7 +3,7 @@ import './App.css';
 
 import Listing from './pages/listing';
 import Detail from './pages/detail';
-import { NotFound } from './pages/not-found';
+import NotFound from './pages/not-found';
 
 import {
   BrowserRouter as Router,
@@ -27,7 +27,7 @@ class App extends React.Component<null, null> {
             <Switch>
               <Route exact path="/" component={Listing}/>
               <Route path="/detail/:id" component={Detail}/>
-              <Route render={NotFound}/>
+              <Route component={NotFound}/>
             </Switch>
           </div>
         </div>

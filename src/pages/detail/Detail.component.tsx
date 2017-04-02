@@ -19,7 +19,7 @@ export default class Detail extends React.Component<any, void> {
     const titleStyle = {
       fontSize: 25,
       fontWeight: 600
-    } as any;
+    } as {};
 
     const paperStyle = {
       background: red100,
@@ -51,7 +51,7 @@ export default class Detail extends React.Component<any, void> {
                 Is potentially hazardous!
               </Paper>
             ) : null }
-          { this.renderEstimatedDiameterTabs() }
+          {this.renderEstimatedDiameterTabs()}
         </CardText>
       </Card>
     );

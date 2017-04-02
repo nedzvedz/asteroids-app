@@ -25,13 +25,12 @@ export default (props: { asteroid: Asteroid }) => {
       </div>
       <div className="asteroid__column">
         <RaisedButton
-          containerElement={<Link to={detailUrl} />}
+          containerElement={<Link className="asteroid__link" to={detailUrl} />}
           primary={true}
-          className="asteroid__link"
         >
           Details
         </RaisedButton>
       </div>
     </div>
   );
-}
+};
