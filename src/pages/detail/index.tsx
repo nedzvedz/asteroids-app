@@ -1,7 +1,3 @@
-import * as React from 'react';
+import Detail from './Detail.container';
 
-export class Detail extends React.Component<any, void> {
-  render() {
-    return <h2>Detail asteroid page will be here.</h2>;
-  }
-}
+export default Detail;

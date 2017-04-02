@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 
 import Listing from './pages/listing';
-import { Detail } from './pages/detail';
+import Detail from './pages/detail';
 import { NotFound } from './pages/not-found';
 
 import {

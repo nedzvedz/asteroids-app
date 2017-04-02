@@ -1,5 +1,5 @@
-export interface CurrentAsteroidState {
-  id: string | null;
-}
+import { Asteroid } from '../interfaces/asteroid';
 
-export const initialCurrentAsteroidState: CurrentAsteroidState = { id: null };
+export interface CurrentAsteroidState extends Asteroid {}
+
+export const initialCurrentAsteroidState: CurrentAsteroidState = null;

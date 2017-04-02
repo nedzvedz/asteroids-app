@@ -23,16 +23,9 @@ export function getAsteroids() {
     });
 }
 
-export function getAsteroidById(id: string = '3542519') {
+export function getAsteroidById(id: string) {
   return fetch(`${ASTEROIDS_LOOKUP_API_LINK}${id}?API_KEY=${API_KEY}`)
-    .then((res: Response): Promise<AsteroidsFeedResponse> => res.json())
-    .then((data) => {
-      // TODO: Check for other options to fix missing 'values' method at Object constructor
-      return (<any> Object).values(data.near_earth_objects)
-        .reduce((allAsteroids: Array<Asteroid>, asteroidsAtSpecificDate: Array<Asteroid>) => {
-          return [...allAsteroids, ...asteroidsAtSpecificDate];
-        }, []);
-    });
+    .then((res: Response): Promise<Asteroid> => res.json());
 }
 
 export default {
