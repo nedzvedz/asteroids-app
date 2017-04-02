@@ -7,6 +7,8 @@ function currentAsteroid(
   action: Action
 ): CurrentAsteroidState {
   switch (action.type) {
+    case actionTypes.START_LOADING_CURRENT_ASTEROID:
+      return null;
     case actionTypes.SET_CURRENT_ASTEROID:
       return action.payload;
     default:

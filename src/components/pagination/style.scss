@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    // margins are used for inner items as inline styles
+    // to override lib styles
+    padding: 0 0 0 10px;
+  }
+
+  &__item {
+    width: 40px;
+  }
+}

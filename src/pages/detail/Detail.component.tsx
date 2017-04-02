@@ -3,8 +3,8 @@ import { Card, CardHeader, CardText } from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import WarningIcon from 'material-ui/svg-icons/alert/warning';
-import CircularProgress from 'material-ui/CircularProgress';
-import { red200, red800 } from 'material-ui/styles/colors';
+import Spinner from '../../components/spinner';
+import { red100, red800 } from 'material-ui/styles/colors';
 
 import './style.css';
 
@@ -22,7 +22,7 @@ export default class Detail extends React.Component<any, void> {
     } as any;
 
     const paperStyle = {
-      background: red200,
+      background: red100,
       color: red800
     };
 
@@ -33,7 +33,7 @@ export default class Detail extends React.Component<any, void> {
     };
 
     if (!asteroid) {
-      return <div className="spinner"><CircularProgress size={60} thickness={7} /></div>;
+      return <Spinner />;
     }
 
     return (

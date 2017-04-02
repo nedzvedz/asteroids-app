@@ -21,7 +21,7 @@ class App extends React.Component<null, null> {
         <div className="App">
           <div className="App-header">
             <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
-            <h2>Welcome to React</h2>
+            <h2>Welcome to Asteroids App</h2>
           </div>
           <div className="App-intro">
             <Switch>
